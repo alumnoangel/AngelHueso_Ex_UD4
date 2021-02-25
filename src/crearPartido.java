@@ -1,21 +1,30 @@
 
 import java.awt.event.KeyEvent;
 
-
-
+/**
+ * 
+ * @author Angel
+ */
 public class crearPartido extends javax.swing.JFrame
 {
    
-    
+   /**
+    * 
+    */
     private Apuesta v;
     
-   
+    /**
+     * 
+     */
     public crearPartido() 
     {
         initComponents();
     }
 
-   
+    /**Crear la ventana de apuesta
+     * 
+     * @param ventana 
+     */
     public crearPartido(Apuesta ventana) 
     {
         initComponents();
@@ -69,18 +78,27 @@ public class crearPartido extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**Añadir un nuevo partido
+     * 
+     * @param p 
+     */
     public void añadePartido(String p)
     {
         v.partidoNuevo(p);
         tPartido.setText("");
         tPartido.requestFocus();
     }
-    
+    /**Agregar las acciones del partido mediante texto
+     * 
+     * @param evt 
+     */
     private void bAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarPartidoActionPerformed
         añadePartido(tPartido.getText());
     }//GEN-LAST:event_bAgregarPartidoActionPerformed
-
+    /**Metodo para añadir partidos mediente teclas
+     * 
+     * @param evt 
+     */
     private void tPartidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPartidoKeyPressed
         if( evt.getKeyCode() == KeyEvent.VK_ENTER )
         {
@@ -88,7 +106,10 @@ public class crearPartido extends javax.swing.JFrame
         }
     }//GEN-LAST:event_tPartidoKeyPressed
 
-    
+    /**
+     * 
+     * @param args 
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
